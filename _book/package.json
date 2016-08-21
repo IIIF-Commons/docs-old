@@ -1,0 +1,24 @@
+{
+  "name": "viewdir.github.io",
+  "version": "1.0.0",
+  "description": "built using https://github.com/GitbookIO/gitbook",
+  "main": "gulpfile.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viewdir/viewdir.github.io.git"
+  },
+  "author": "Edward Silverton <e.silverton@gmail.com> (http://edsilv.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/viewdir/viewdir.github.io/issues"
+  },
+  "homepage": "https://github.com/viewdir/viewdir.github.io#readme"
+}
