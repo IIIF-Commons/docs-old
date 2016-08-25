@@ -1,56 +1,17 @@
-#manifesto
+## Introduction
+The Software Developers Interest Group formed in response to the growing need for shared, composable libraries for IIIF viewer software following the IIIF Meeting in New York in May 2016. Software developers from several institutions involved in developing user experiences on top of the IIIF APIs were duplicating each other’s effort and finding it difficult to consistently apply the specifications.
 
-https://github.com/viewdir/manifesto 
+As the IIIF developer community grows, it continues to have a greater need for reusable components that can be composed into special-purpose applications. In the interest of keeping pace with improvement to the Image and Presentation API specifications, as well as the introduction of new APIs, the interest group provides a vehicle for developers from multiple institutions to discuss, develop, and curate a collection of software components that adhere to certain standards of software quality, composability, and specification compliance.  This interest group includes software developers from Digirati, Harvard University, Princeton University, and Stanford University.
 
-Manifesto is an isomorphic node.js library designed to make working with IIIF Presentation API manifests easy on the client and server side. The current feature set includes:
+## Purpose
+To advance the growth and adoption of interoperable software with IIIF, the Software Developers Interest Group has the following goals:
+* Provide a place for a community of software developers to converge on day-to-day practices, code quality, and development methodology (particularly around front-end development, which currently has more heterogeneous practices).
+* Develop documentation, training, and tutorials concerning IIIF-based software components.
+* Support this community with shared infrastructure (e.g. Github organisations).
+* Promote reusability and composability of software components (especially frontend components, where there is currently the greatest need for convergence of practices).
+* Develop opportunities and development practices for sustainable collaboration efforts across institutions and funding resources.
 
-- Loading and parsing manifests into a convenient object model
-- IIIF Auth API implementation
-- ‘IxIF’ support for non image-based resources (not currently a recommended specification)
-- Tree hierarchy generation from ranges
-- Localisation support
-- Lazy loading of sub manifests/collections
-
-Possible future features to be added by community:
-
-- Setter functions to allow building manifests programmatically
-- Serialisation of the object model back to JSON-LD
-
-Manifesto is written in TypeScript which allows static typing. This makes it easy to catch coding errors at compile time and makes the project very resilient to refactors. There is also a well maintained mocha test suite.
-
-[Documentation](http://viewdir.github.io/manifesto-docs/)
-
-[Tutorial](http://blog.edsilv.com/manifesto/)
-
-#manifold
-
-https://github.com/viewdir/manifold 
-
-Manifold is a TypeScript library that wraps Manifesto to provide the following IIIF viewer-specific feature set:
-
-- Simple state management
-- Multi-selection state management
-- Tree sorting by date
-- Numerous convenient shortcut utilities 
-
-#base-component
-
-https://github.com/viewdir/base-component 
-
-base-component is designed to underpin any components built to these proposed best practices: https://gist.github.com/edsilv/83221d47fc262230d04fbcdc32dc1d98 
-
-It is also written in TypeScript, but does not require the use of TypeScript by ancestor libraries. It provides a minimal set of bootstrapping functions and a useful `applyMixins` function to allow dynamic mixing-in of other libraries. The TinyEmitter library is mixed-in using this method to provide event publishing.
-
-#component-boilerplate
-
-https://github.com/viewdir/component-boilerplate
-
-A reference implementation of base-component.
-
-#iiif-tree-component
-
-https://github.com/viewdir/iiif-tree-component
-
-iiif-tree-component ([example](http://viewdir.github.io/iiif-tree-component/examples/)) was the first component to be written for the [Universal Viewer](http://universalviewer.io/examples) and comprises the tree menu functionality inside the “index” tab in the left-hand-side panel. 
-
-This uses Manifold’s support for date sorting and lazy loading to populate the menu.
+## Organization
+* Chairs: Rashmi Singhal (Harvard University) and Drew Winget (Stanford University)
+* Virtual meetings announced on IIIF-Discuss
+* Group notes in IIIF Software Developers Folder
