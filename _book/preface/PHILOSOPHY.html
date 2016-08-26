@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>Libraries · GitBook</title>
+        <title>Philosophy · GitBook</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="MANIFESTO.html" />
+    <link rel="next" href="START-HERE.html" />
     
     
-    <link rel="prev" href="../preface/START-HERE.html" />
+    <link rel="prev" href="../" />
     
 
     </head>
@@ -103,9 +103,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.1.1" data-path="../preface/PHILOSOPHY.html">
+        <li class="chapter active" data-level="1.1.1" data-path="PHILOSOPHY.html">
             
-                <a href="../preface/PHILOSOPHY.html">
+                <a href="PHILOSOPHY.html">
             
                     
                     Philosophy
@@ -116,9 +116,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.2" data-path="../preface/START-HERE.html">
+        <li class="chapter " data-level="1.1.2" data-path="START-HERE.html">
             
-                <a href="../preface/START-HERE.html">
+                <a href="START-HERE.html">
             
                     
                     Start Here
@@ -134,9 +134,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="./">
+        <li class="chapter " data-level="1.2" data-path="../libraries/">
             
-                <a href="./">
+                <a href="../libraries/">
             
                     
                     Libraries
@@ -148,9 +148,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="MANIFESTO.html">
+        <li class="chapter " data-level="1.2.1" data-path="../libraries/MANIFESTO.html">
             
-                <a href="MANIFESTO.html">
+                <a href="../libraries/MANIFESTO.html">
             
                     
                     manifesto
@@ -161,9 +161,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="MANIFOLD.html">
+        <li class="chapter " data-level="1.2.2" data-path="../libraries/MANIFOLD.html">
             
-                <a href="MANIFOLD.html">
+                <a href="../libraries/MANIFOLD.html">
             
                     
                     manifold
@@ -174,9 +174,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="BASE-COMPONENT.html">
+        <li class="chapter " data-level="1.2.3" data-path="../libraries/BASE-COMPONENT.html">
             
-                <a href="BASE-COMPONENT.html">
+                <a href="../libraries/BASE-COMPONENT.html">
             
                     
                     base-component
@@ -187,9 +187,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4" data-path="COMPONENT-BOILERPLATE.html">
+        <li class="chapter " data-level="1.2.4" data-path="../libraries/COMPONENT-BOILERPLATE.html">
             
-                <a href="COMPONENT-BOILERPLATE.html">
+                <a href="../libraries/COMPONENT-BOILERPLATE.html">
             
                     
                     component-boilerplate
@@ -200,9 +200,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.5" data-path="IIIF-TREE-COMPONENT.html">
+        <li class="chapter " data-level="1.2.5" data-path="../libraries/IIIF-TREE-COMPONENT.html">
             
-                <a href="IIIF-TREE-COMPONENT.html">
+                <a href="../libraries/IIIF-TREE-COMPONENT.html">
             
                     
                     iiif-tree-component
@@ -261,7 +261,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Libraries</a>
+        <a href=".." >Philosophy</a>
     </h1>
 </div>
 
@@ -276,7 +276,21 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="libraries">Libraries</h1><p>The beautiful thing about using components is that you may not have to do much development at all.  This section contains descriptions of components that you can use in your own projects.</p>
+                                <h2 id="philosophy">Philosophy</h2><p>Interoperable content is <em>the</em> central goal of the IIIF project.  ViewDir carries the dream of interoperability to the development of software itself.  For software to be interoperable, it must be designed to not only implement the content and service specifications provided by IIIF, but also to adhere to principles that allow for decentralized but coordinated development.  The Unix philosophy is an example of a composable approach to software design, where 1) each program does one thing well and 2) all programs are designed to work together.  We don&#x2019;t often think of client-side software as composable systems, but we believe <em>composable</em> UI components will save thousands of hours of developer time and exponentially expand what is possible when it comes to the creation of client-side viewers and editors.</p><p>Most often, web UI libraries fall under one of two categories. They may be part of a &#x201C;framework&#x201D;, or a grouping of UI components that share an appearance, a similar API, or are otherwise cohesive. Another category is usually the standalone library. Components that are part of a framework are usually hard to integrate with anything that&#x2019;s not part of said framework, resulting in &#x201C;vendor&#x201D; lock-in. Components that aren&#x2019;t part of a framework tend to be easier to integrate with other things, but most often they&#x2019;re not designed to that effect. [1] Composability is a much better alternative, and our approach is similar to that taken by Google (web components) and Facebook (React) without tying ourselves into any particular framework.</p><p>Composability is good because:</p><ul><li>no lock-in, swap them out if a better one comes along
+</li>
+<li>reuse promotes code quality due to many/diverse users
+</li>
+<li>saves money because things aren&apos;t getting developed twice
+</li>
+<li>code stays small and manageable - easy to on-board
+</li>
+<li>use whatever framework you like, components are agnostic
+</li>
+<li>less risk when &quot;buying in&quot; to a particular software stack
+</li>
+<li>consistent design, adherence to an agreed pattern rather than some unsustainable monolith
+</li></ul>
+<p>[1] Bevacqua, N. (2015, July). Composable UI. Retrieved July 28, 2016, from <a href="https://ponyfoo.com/articles/composable-ui" target="_blank">https://ponyfoo.com/articles/composable-ui</a></p>
                                 
                                 </section>
                             
@@ -303,12 +317,12 @@
 
             
                 
-                <a href="../preface/START-HERE.html" class="navigation navigation-prev " aria-label="Previous page: Start Here">
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: About ViewDir">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="MANIFESTO.html" class="navigation navigation-next " aria-label="Next page: manifesto">
+                <a href="START-HERE.html" class="navigation navigation-next " aria-label="Next page: Start Here">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -319,7 +333,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Libraries","level":"1.2","depth":1,"next":{"title":"manifesto","level":"1.2.1","depth":2,"path":"libraries/MANIFESTO.md","ref":"libraries/MANIFESTO.md","articles":[]},"previous":{"title":"Start Here","level":"1.1.2","depth":2,"path":"preface/START-HERE.md","ref":"preface/START-HERE.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"libraries/README.md","mtime":"2016-08-26T16:34:07.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-08-26T15:35:51.402Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Philosophy","level":"1.1.1","depth":2,"next":{"title":"Start Here","level":"1.1.2","depth":2,"path":"preface/START-HERE.md","ref":"preface/START-HERE.md","articles":[]},"previous":{"title":"About ViewDir","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[{"title":"Philosophy","level":"1.1.1","depth":2,"path":"preface/PHILOSOPHY.md","ref":"preface/PHILOSOPHY.md","articles":[]},{"title":"Start Here","level":"1.1.2","depth":2,"path":"preface/START-HERE.md","ref":"preface/START-HERE.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"preface/PHILOSOPHY.md","mtime":"2016-08-26T17:06:23.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-08-26T15:35:51.402Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
