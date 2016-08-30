@@ -1,6 +1,6 @@
-##Step One: Use component-boilerplate as a template
+##Step One: Boilerplate
 
-We are going to replicate the `component-boilerplate`. The easiest way to do this is to simply clone component-boilerplate, delete the .git directory, then git init, git add ., and git commit. After doing this, I followed [these instructions for creating my own remote GitHub repo for the component from the command line](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/). I run:
+To start, we are going to replicate the `component-boilerplate` and use it as a starting template for our component. The easiest way to do this is to simply clone component-boilerplate, delete the .git directory, then git init, git add ., and git commit. After doing this, I followed [these instructions for creating my own remote GitHub repo for the component from the command line](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/). I run:
 
 ```
 npm install
