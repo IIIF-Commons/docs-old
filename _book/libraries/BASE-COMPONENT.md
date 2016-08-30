@@ -1,0 +1,7 @@
+#base-component
+
+https://github.com/viewdir/base-component
+
+base-component is designed to underpin any components built to these proposed best practices: https://gist.github.com/edsilv/83221d47fc262230d04fbcdc32dc1d98
+
+It is also written in TypeScript, but does not require the use of TypeScript by ancestor libraries. It provides a minimal set of bootstrapping functions and a useful `applyMixins` function to allow dynamic mixing-in of other libraries. The TinyEmitter library is mixed-in using this method to provide event publishing.
