@@ -6,6 +6,7 @@
     * [Tutorial](tutorial.md)
         * [Step One: Boilerplate](step-one-boilerplate.md)
         * [Step Two: Custom Styles and Images](step-two.md)
+        * [Step Three: Add a Dependency](step-three-add-a-3rd-party-library-dependency.md)
 * [Libraries](libraries/README.md)
     * [manifesto](libraries/MANIFESTO.md)
     * [manifold](libraries/MANIFOLD.md)
