@@ -27,3 +27,38 @@ Now, we just need to add some markup to our example `index.html` to get OSD work
 </style>
 ```
 
+```
+<div id="osd" class="openseadragon">
+
+    <script type="text/javascript"> 
+
+        OpenSeadragon({ 
+
+            id: "osd", 
+
+            prefixUrl: "/js/openseadragon/images/", 
+
+            tileSources: [{ 
+
+                "@context": "http://iiif.io/api/image/2/context.json", 
+
+                "@id": "http://libimages.princeton.edu/loris2/pudl0001%2F4609321%2Fs42%2F00000002.jp2", 
+
+                "height": 7200, 
+
+                "width": 5093, 
+
+                "profile": 
+                    [ "http://iiif.io/api/image/2/level2.json" ], 
+                    "protocol": "http://iiif.io/api/image", 
+                    "tiles": [{ "scaleFactors": [ 1, 2, 4, 8, 16, 32 ], 
+                    "width": 1024 }] 
+
+            }] 
+
+        });
+
+</script>
+
+```
+
