@@ -36,7 +36,7 @@ npm install gulp-less --save-dev
 
 Now, we will create our gulp tasks.  I add the following lines to the `tasks/copy.js`:
 
-```
+```js
 gulp.task('copy:css', function() {
      return gulp.src([path.join(config.dist, config.cssOut)]).pipe(gulp.dest(config.examplesCssDir)); 
 });
