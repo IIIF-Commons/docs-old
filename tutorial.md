@@ -2,11 +2,9 @@
 
 Let's create a component called SvgDraw that will allow us to create SVG shapes that can be used as overlays in OpenSeadragon \(or elsewhere\).
 
-
-
 ## Step One: Use component-boilerplate as a template
 
-We are going to replicate the `component-boilerplate`.  The easiest way to do this is to simply clone component-boilerplate, delete the .git directory, then git init, git add ., and git commit.  After doing this, I followed [these instructions for creating my own remote GitHub repo for the component from the command line](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/).  I run: 
+We are going to replicate the `component-boilerplate`.  The easiest way to do this is to simply clone component-boilerplate, delete the .git directory, then git init, git add ., and git commit.  After doing this, I followed [these instructions for creating my own remote GitHub repo for the component from the command line](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/).  I run:
 
 ```
 npm install
@@ -28,7 +26,7 @@ Since I know that I'm going to want to have some custom CSS and icons for my com
 }
 ```
 
-We can leave the img directory blank for now.  
+We can leave the img directory blank for now.
 
 In order for the less file to be compiled into css, we need to add a npm module called `gulp-less` and we also need to add gulp tasks to ensure the resulting files are copied into the appropriate location in `examples` when we run `gulp build`.  To add the gulp-less npm module to the package.json devDependencies, type the following npm command:
 
@@ -48,9 +46,29 @@ gulp.task('copy:img', function() {
 });
 ```
 
+I also add a file called less.js to the tasks directory.  It looks like this
+
+```
+var c = require('../gulpfile.config');
+var config = new c();
+var gulp = require('gulp');
+var less = require('gulp-less');
+var path = require('path');
+var rename = require('gulp-rename');
+
+gulp.task('less', function () {
+ return gulp.src(config.cssSrc) 
+    .pipe(less({ 
+        paths: [ path.join(__dirname, 'less', 'includes') ]    
+    })) 
+    .pipe(rename(config.cssOut)) 
+    .pipe(gulp.dest(config.dist));
+ });
+```
+
 We then add these tasks to the `gulpfile.js` 'sync' task to look like this:
 
-`gulp.task('sync', ['copy:bundle', 'copy:css', 'copy:img', 'copy:typings']);`
-
-
+```js
+gulp.task('sync', ['copy:bundle', 'copy:css', 'copy:img', 'copy:typings']);
+```
 
