@@ -48,7 +48,7 @@ gulp.task('copy:img', function() {
 
 I also add a file called less.js to the tasks directory.  It looks like this
 
-```
+```js
 var c = require('../gulpfile.config');
 var config = new c();
 var gulp = require('gulp');
