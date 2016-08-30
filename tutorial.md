@@ -12,7 +12,7 @@ gulp
 gulp examples
 ```
 
-Then, I point my browser to http:\/\/localhost:8080 and should get the javascript alert to ensure that the example demo works.  Finally, I replace all instances of "ExampleComponent" with the name of my new component called "SvgDraw".  Make sure the example demo still works after you've made those changes.
+Then, I point my browser to [http:\/\/localhost:8080](http://localhost:8080) and should get the javascript alert to ensure that the example demo works.  Finally, I replace all instances of "ExampleComponent" with the name of my new component called "SvgDraw".  Make sure the example demo still works after I've made those changes.
 
 ## Step Two: Adding Custom Styles and Images
 

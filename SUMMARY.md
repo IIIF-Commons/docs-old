@@ -4,6 +4,8 @@
     * [Philosophy](preface/PHILOSOPHY.md)
     * [Start Here](preface/START-HERE.md)
     * [Tutorial](tutorial.md)
+        * [Step One: Boilerplate](step-one-boilerplate.md)
+        * [Step Two: Custom Styles and Images](step-two.md)
 * [Libraries](libraries/README.md)
     * [manifesto](libraries/MANIFESTO.md)
     * [manifold](libraries/MANIFOLD.md)
