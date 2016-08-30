@@ -38,3 +38,7 @@ Finally, let's test it out in the examples demo.  Go ahead and add the following
 ...
 ```
 
+You should see a diagonal line drawn on the screen that looks like this:
+
+![](/assets/paperjs-example.png)
+
