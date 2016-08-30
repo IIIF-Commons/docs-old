@@ -11,3 +11,9 @@ this.examplesDeps = [
 ];
 ```
 
+Then we will add the following line to our index.html:
+
+```
+<script src="js/openseadragon/openseadragon.min.js"></script>
+```
+
