@@ -17,3 +17,8 @@ Then we will add the following line to our index.html head:
 <script src="js/openseadragon/openseadragon.min.js"></script>
 ```
 
+Now, we just need to add some markup to draw OSD:
+
+```
+<style> .openseadragon { width: 800px; height: 600px; border: 1px solid black; color: #333; /* text color for messages */ background-color: black; } </style>
+```
