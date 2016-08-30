@@ -66,7 +66,13 @@ gulp.task('less', function () {
  });
 ```
 
-We then add these tasks to the `gulpfile.js` 'sync' task to look like this:
+Finally, we add these tasks to the `gulpfile.js` .  Add 'less' to the default runSequence here:
+
+```js
+runSequence('clean:dist', 'build', 'browserify', 'less', 'minify', ...
+```
+
+And add our `copy:css` and `copy:img` tasks to the 'sync' task:
 
 ```js
 gulp.task('sync', ['copy:bundle', 'copy:css', 'copy:img', 'copy:typings']);
