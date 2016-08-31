@@ -29,7 +29,7 @@ Finally, let's test it out in the examples demo.  Go ahead and add the following
 ...
  <script type="text/paperscript" canvas="myCanvas">
      var path = new Path();
-     path.strokeColor = 'red';
+     path.strokeColor = 'black';
      var start = new Point(100, 100);
      path.moveTo(start);
      path.lineTo(start + [ 100, -50 ]);
