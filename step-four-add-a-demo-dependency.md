@@ -17,7 +17,7 @@ Then we will add the following line to our index.html head:
 <script src="js/openseadragon/openseadragon.min.js"></script>
 ```
 
-Now, we just need to add some markup to our example `index.html` to get OSD working.  Put this in the `<head/>`:
+Now, we just need to add some markup to our example `index.html` to get OSD working in the demo.  Put this in the `<head/>`:
 
 ```
 <style> 
