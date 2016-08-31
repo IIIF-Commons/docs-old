@@ -32,8 +32,8 @@ And put this in the `<body/>`:
 ```
 <div id="osd" class="openseadragon">
 
-    <script type="text/javascript"> 
-        OpenSeadragon({ 
+  <script type="text/javascript"> 
+    var viewer = OpenSeadragon({ 
             id: "osd", 
             prefixUrl: "/js/openseadragon/images/", 
             tileSources: [{ 
@@ -48,7 +48,18 @@ And put this in the `<body/>`:
                     "width": 1024 }] 
             }] 
         });
-    </script>
 
+    // add our <canvas> element as an OSD overlay...
+    var element = document.getElementById('myCanvas');
+    var rect = new OpenSeadragon.Rect(0, 0, 1, viewer.viewport.getAspectRatio());
+
+    viewer.addOverlay({
+     element: element,
+     location: rect
+    });
+
+  </script>
 ```
+
+Reload your demo page, and you should see the overlay.
 
