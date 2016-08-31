@@ -61,5 +61,5 @@ And put this in the `<body/>`:
   </script>
 ```
 
-Reload your demo page, and you should see the overlay.
+Reload your demo page, and you should see the overlay \(you may want to make the line color red so it's easier to see\).
 
