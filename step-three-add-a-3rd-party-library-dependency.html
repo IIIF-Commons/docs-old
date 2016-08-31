@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>About ViewDir · GitBook</title>
+        <title>Step Three: Add a Dependency · GitBook</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="preface/PHILOSOPHY.html" />
+    <link rel="next" href="step-four-add-a-demo-dependency.html" />
     
+    
+    <link rel="prev" href="step-two.html" />
     
 
     </head>
@@ -87,7 +89,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -256,7 +258,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="step-three-add-a-3rd-party-library-dependency.html">
+        <li class="chapter active" data-level="1.3.3" data-path="step-three-add-a-3rd-party-library-dependency.html">
             
                 <a href="step-three-add-a-3rd-party-library-dependency.html">
             
@@ -343,7 +345,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >About ViewDir</a>
+        <a href="." >Step Three: Add a Dependency</a>
     </h1>
 </div>
 
@@ -358,7 +360,25 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p><img alt="Image of ViewDir Logo" src="https://avatars2.githubusercontent.com/u/20472648?v=3&amp;s=300"></p><h1 id="about-viewdir">About ViewDir</h1><p>ViewDir is a open community of developers interested in creating <em>composable</em> and <em>interoperable</em> interfaces for consuming and creating online content.  ViewDir is related to the <a href="http://iiif.io/" target="_blank">IIIF project</a>, and this book should fulfill at least a few of the <a href="http://iiif.io/community/groups/softwaredevs/" target="_blank">IIIF Software Developers Interest Group goals</a>.  However, software components can and should be designed to work outside of the IIIF context unless there are necessary dependencies.  Such an approach aims to broaden the developer community, expand the use of the components, and spread awareness of the IIIF project.</p>
+                                <h1 id="step-three-add-a-dependency">Step Three: Add a Dependency</h1><p>You&apos;ll often want to lean on other libraries like jQuery or lodash to make your life easier.  Here we will improve our developer experience by adding a dependency on the paper.js SVG library.</p><p>Let&apos;s start by adding paper.js as a dependency:</p><p><code>npm install paper --save</code></p><p>This will add it to our package.json file, so it will be included whenever we install the component.</p><p>Next, we need to update our <code>gulpfile.config.js</code>, find the distribution in our node module library, and add the dependency so it gets bundled into our component.</p><pre><code class="lang-js">
+<span class="hljs-comment">// libs that MUST be included in a consuming app for this component to work</span>
+
+ <span class="hljs-keyword">this</span>.deps = [
+ <span class="hljs-string">&apos;node_modules/base-component/dist/base-component.bundle.js&apos;</span>,
+ <span class="hljs-string">&apos;node_modules/paper/dist/paper-full.min.js&apos;</span>
+ ];
+</code></pre>
+<p>(We are using the full, compiled version of paper.js.)</p><p>Finally, let&apos;s test it out in the examples demo.  Go ahead and add the following code in the <code>&lt;body&gt;</code> tag of the <code>index.html</code> file and refresh the page:</p><pre><code class="lang-js">...
+ &lt;script type=<span class="hljs-string">&quot;text/paperscript&quot;</span> canvas=<span class="hljs-string">&quot;myCanvas&quot;</span>&gt;
+     <span class="hljs-keyword">var</span> path = <span class="hljs-keyword">new</span> Path();
+     path.strokeColor = <span class="hljs-string">&apos;black&apos;</span>;
+     <span class="hljs-keyword">var</span> start = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>);
+     path.moveTo(start);
+     path.lineTo(start + [ <span class="hljs-number">100</span>, <span class="hljs-number">-50</span> ]);
+ <span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span> 
+ &lt;canvas id=<span class="hljs-string">&quot;myCanvas&quot;</span> resize&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">canvas</span>&gt;</span></span>
+...</code></pre>
+<p>You should see a diagonal line drawn on the screen that looks like this:</p><p><img src="assets/paperjs-example.png"></p>
                                 
                                 </section>
                             
@@ -385,8 +405,12 @@
 
             
                 
+                <a href="step-two.html" class="navigation navigation-prev " aria-label="Previous page: Step Two: Custom Styles and Images">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="preface/PHILOSOPHY.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Philosophy">
+                
+                <a href="step-four-add-a-demo-dependency.html" class="navigation navigation-next " aria-label="Next page: Step Four: Add a Demo Dependency">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -397,7 +421,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"About ViewDir","level":"1.1","depth":1,"next":{"title":"Philosophy","level":"1.1.1","depth":2,"path":"preface/PHILOSOPHY.md","ref":"preface/PHILOSOPHY.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2016-08-30T14:03:15.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-08-31T16:29:54.696Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Step Three: Add a Dependency","level":"1.3.3","depth":2,"next":{"title":"Step Four: Add a Demo Dependency","level":"1.3.4","depth":2,"path":"step-four-add-a-demo-dependency.md","ref":"step-four-add-a-demo-dependency.md","articles":[]},"previous":{"title":"Step Two: Custom Styles and Images","level":"1.3.2","depth":2,"path":"step-two.md","ref":"step-two.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"step-three-add-a-3rd-party-library-dependency.md","mtime":"2016-08-31T16:13:22.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-08-31T16:29:54.696Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
