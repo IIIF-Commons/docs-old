@@ -1,4 +1,4 @@
-## Step Two: Adding Custom Styles and Images
+# Step Two: Adding Custom Styles and Images
 
 Since I know that I'm going to want to have some custom CSS and icons for my component, the next thing I do is create the following two directories in the `src` directory: `css` and `img` . I create a simple `styles.less` file in `css` that looks like this:
 
@@ -14,7 +14,7 @@ We can leave the `img` directory blank for now.
 
 In order for the less file to be compiled into css, we need to add a npm module called `gulp-less` and we also need to add gulp tasks to ensure the compiled css files are copied into the appropriate location in `examples` when our build runs. To add the gulp-less npm module to the package.json devDependencies, type the following npm command:
 
-```npm install gulp-less --save-dev```
+`npm install gulp-less --save-dev`
 
 Now, we will create our gulp tasks. I add the following lines to the `tasks/copy.js`:
 
@@ -59,3 +59,4 @@ And add our `copy:css` and `copy:img` tasks to the 'sync' task:
 ```js
 gulp.task('sync', ['copy:bundle', 'copy:css', 'copy:img', 'copy:typings']);
 ```
+
