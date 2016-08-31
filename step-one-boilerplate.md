@@ -8,5 +8,5 @@ gulp
 gulp examples
 ```
 
-Then, if we point our browser to [http:\/\/localhost:8080](http://localhost:8080) we should get the javascript alert to ensure that the example demo works. Finally, I replace all instances of "ExampleComponent" with the name of my new component called "SvgDraw". Make sure the example demo still works after I've made those changes.
+Then, if we point our browser to [http:\/\/localhost:8080](http://localhost:8080) we should get the javascript alert to ensure that the example demo works. Finally, we replace all instances of "ExampleComponent" with the name of our new component called "SvgDraw". Make sure the example demo still works after I've made those changes.
 
