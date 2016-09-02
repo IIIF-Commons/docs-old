@@ -19,5 +19,12 @@ public options: ISvgDrawComponentOptions;
 private _$canvas: JQuery;
 ```
 
-The first thing I want to do is get rid of that javascript alert that pops up when we reload the page.  Conveniently, we can simply change this behavior to set up our first drawing tool that will allow us to create a simple path on the canvas.
+Then, in the \_init method we can replace the `this._$element.append("I am an example component");` line with this:
+
+```
+this._$canvas = $('<canvas id="canvas-1"></canvas>'); 
+this._$element.append(this._$canvas);
+```
+
+
 
