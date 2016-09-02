@@ -15,5 +15,6 @@
     * [Step Three: Add a Dependency](step-three-add-a-3rd-party-library-dependency.md)
     * [Step Four: Add a Demo Dependency](step-four-add-a-demo-dependency.md)
     * [Step Five: Define the Component Interface](step-five-define-the-component-interface.md)
+    * [Step Six: Define Options](step-six-define-options.md)
 * [Closing Thoughts](conclusion/README.md)
 
