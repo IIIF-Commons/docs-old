@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>About ViewDir · GitBook</title>
+        <title>Step Two: Custom Styles and Images · GitBook</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="preface/PHILOSOPHY.html" />
+    <link rel="next" href="step-three-add-a-3rd-party-library-dependency.html" />
     
+    
+    <link rel="prev" href="step-one-boilerplate.html" />
     
 
     </head>
@@ -87,7 +89,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -243,7 +245,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="step-two.html">
+        <li class="chapter active" data-level="1.3.2" data-path="step-two.html">
             
                 <a href="step-two.html">
             
@@ -343,7 +345,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >About ViewDir</a>
+        <a href="." >Step Two: Custom Styles and Images</a>
     </h1>
 </div>
 
@@ -358,7 +360,36 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p><img alt="Image of ViewDir Logo" src="https://avatars2.githubusercontent.com/u/20472648?v=3&amp;s=300"></p><h1 id="about-viewdir">About ViewDir</h1><p>ViewDir is a open community of developers interested in creating <em>composable</em> and <em>interoperable</em> interfaces for consuming and creating online content.  ViewDir is related to the <a href="http://iiif.io/" target="_blank">IIIF project</a>, and this book should fulfill at least a few of the <a href="http://iiif.io/community/groups/softwaredevs/" target="_blank">IIIF Software Developers Interest Group goals</a>.  However, software components can and should be designed to work outside of the IIIF context unless there are necessary dependencies.  Such an approach aims to broaden the developer community, expand the use of the components, and spread awareness of the IIIF project.</p>
+                                <h1 id="step-two-adding-custom-styles-and-images">Step Two: Adding Custom Styles and Images</h1><p>Since I know that I&apos;m going to want to have some custom CSS and icons for my component, the next thing I do is create the following two directories in the <code>src</code> directory: <code>css</code> and <code>img</code> . I create a simple <code>styles.less</code> file in <code>css</code> that looks like this:</p><pre><code class="lang-css">@img-path: &quot;../img/&quot;
+
+.svg-draw-component{
+    //someplace to put component-specific css (perhaps put the viewdir logo here?).
+}</code></pre>
+<p>We can leave the <code>img</code> directory blank for now.</p><p>In order for the less file to be compiled into css, we need to add a npm module called <code>gulp-less</code> and we also need to add gulp tasks to ensure the compiled css files are copied into the appropriate location in <code>examples</code> when our build runs. To add the gulp-less npm module to the package.json devDependencies, type the following npm command:</p><p><code>npm install gulp-less --save-dev</code></p><p>Now, we will create our gulp tasks. I add the following lines to the <code>tasks/copy.js</code>:</p><pre><code class="lang-js">gulp.task(<span class="hljs-string">&apos;copy:css&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+ <span class="hljs-keyword">return</span> gulp.src([path.join(config.dist, config.cssOut)]).pipe(gulp.dest(config.examplesCssDir)); 
+});
+
+gulp.task(<span class="hljs-string">&apos;copy:img&apos;</span>,other <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+ <span class="hljs-keyword">return</span> gulp.src(config.imgSrc).pipe(gulp.dest(config.examplesImgDir));
+});</code></pre>
+<p>We also need to add a file called less.js to the <code>tasks</code> directory. It looks like this:</p><pre><code class="lang-js"><span class="hljs-keyword">var</span> c = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../gulpfile.config&apos;</span>);
+<span class="hljs-keyword">var</span> config = <span class="hljs-keyword">new</span> c();
+<span class="hljs-keyword">var</span> gulp = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;gulp&apos;</span>);
+<span class="hljs-keyword">var</span> less = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;gulp-less&apos;</span>);
+<span class="hljs-keyword">var</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+<span class="hljs-keyword">var</span> rename = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;gulp-rename&apos;</span>); 
+
+gulp.task(<span class="hljs-string">&apos;less&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+ <span class="hljs-keyword">return</span> gulp.src(config.cssSrc)
+     .pipe(less({
+         paths: [ path.join(__dirname, <span class="hljs-string">&apos;less&apos;</span>, <span class="hljs-string">&apos;includes&apos;</span>) ]
+     }))
+     .pipe(rename(config.cssOut))
+     .pipe(gulp.dest(config.dist));
+});</code></pre>
+<p>Finally, we add these tasks to the <code>gulpfile.js</code> . Add &apos;less&apos; to the default runSequence here:</p><pre><code class="lang-js">runSequence(<span class="hljs-string">&apos;clean:dist&apos;</span>, <span class="hljs-string">&apos;build&apos;</span>, <span class="hljs-string">&apos;browserify&apos;</span>, <span class="hljs-string">&apos;less&apos;</span>, <span class="hljs-string">&apos;minify&apos;</span>, ...</code></pre>
+<p>And add our <code>copy:css</code> and <code>copy:img</code> tasks to the &apos;sync&apos; task:</p><pre><code class="lang-js">gulp.task(<span class="hljs-string">&apos;sync&apos;</span>, [<span class="hljs-string">&apos;copy:bundle&apos;</span>, <span class="hljs-string">&apos;copy:css&apos;</span>, <span class="hljs-string">&apos;copy:img&apos;</span>, <span class="hljs-string">&apos;copy:typings&apos;</span>]);</code></pre>
+
                                 
                                 </section>
                             
@@ -385,8 +416,12 @@
 
             
                 
+                <a href="step-one-boilerplate.html" class="navigation navigation-prev " aria-label="Previous page: Step One: Boilerplate">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="preface/PHILOSOPHY.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Philosophy">
+                
+                <a href="step-three-add-a-3rd-party-library-dependency.html" class="navigation navigation-next " aria-label="Next page: Step Three: Add a Dependency">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -397,7 +432,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"About ViewDir","level":"1.1","depth":1,"next":{"title":"Philosophy","level":"1.1.1","depth":2,"path":"preface/PHILOSOPHY.md","ref":"preface/PHILOSOPHY.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2016-08-30T14:03:15.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-08-31T16:29:54.696Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Step Two: Custom Styles and Images","level":"1.3.2","depth":2,"next":{"title":"Step Three: Add a Dependency","level":"1.3.3","depth":2,"path":"step-three-add-a-3rd-party-library-dependency.md","ref":"step-three-add-a-3rd-party-library-dependency.md","articles":[]},"previous":{"title":"Step One: Boilerplate","level":"1.3.1","depth":2,"path":"step-one-boilerplate.md","ref":"step-one-boilerplate.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"step-two.md","mtime":"2016-08-31T16:28:13.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-08-31T16:29:54.696Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
