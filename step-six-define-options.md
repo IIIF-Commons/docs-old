@@ -10,5 +10,5 @@ namespace IIIFComponents{
 }
 ```
 
-If no overlay is specified, it will default to a plain old canvas that we can draw on.  We also need to add an `ISvgDrawComponent.ts` interface:
+If no overlay is specified, it will default to a plain old canvas that we can draw on.  We also need to add an `ISvgDrawComponent.ts` interface... 
 
