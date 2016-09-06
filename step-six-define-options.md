@@ -21,5 +21,5 @@ namespace IIIFComponents {
 
 ```
 
-
+Interfaces are one of the features TypeScript gives us, and they are used to type-check arguments.  In other words, Interfaces make sure that the values we pass are what is expected by the method.  More details can be found in the [Interfaces section of the TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/interfaces.html).
 
