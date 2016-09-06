@@ -1,6 +1,6 @@
-# Step Five: A Closer look at the Boilerplate Code
+# Binding to the DOM via _Element_
 
-Now that we're all set up and our dependencies are in order, we can begin work on the component itself.
+The base-component provides an "element" option that allows us to bind our component to the DOM.
 
 Let's start by setting a default element that our component will bind to.  Since this is about drawing, our component will be adding a canvas to the document.  It would be convenient for us to obtain the dimensions of the canvas from the default element, so let's bind it to a &lt;div&gt;, allowing us to work easily with a simple canvas, a basic image overlay, or OpenSeadragon overlay canvases.
 
@@ -22,9 +22,7 @@ private _$canvas: JQuery;
 Then, in the \_init method we can replace the `this._$element.append("I am an example component");` line with this:
 
 ```
-this._$canvas = $('<canvas id="canvas-1"></canvas>'); 
+this._$canvas = $('<canvas id="paper"></canvas>'); 
 this._$element.append(this._$canvas);
 ```
-
-
 

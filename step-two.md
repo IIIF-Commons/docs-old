@@ -1,4 +1,4 @@
-# Step Two: Adding Custom Styles and Images
+# Custom Styles and Images
 
 Since I know that I'm going to want to have some custom CSS and icons for my component, the next thing I do is create the following two directories in the `src` directory: `css` and `img` . I create a simple `styles.less` file in `css` that looks like this:
 
