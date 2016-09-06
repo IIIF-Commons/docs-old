@@ -23,3 +23,12 @@ namespace IIIFComponents {
 
 Interfaces are one of the features TypeScript gives us, and they are used to type-check arguments.  In other words, Interfaces make sure that the values we pass are what is expected by the method.  More details can be found in the [Interfaces section of the TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/interfaces.html).
 
+We can do a quick test to make sure our option is coming through.  Remember the "I am an example component..." message from the boilerplate?  Well, you can do something similar in the \_init\(\) function by appending the value to the \_$element:
+
+```
+...
+    this._$element.append(this.options.overlayType); // <-- add this line to test
+    return success
+}
+```
+
