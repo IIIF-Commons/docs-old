@@ -93,5 +93,5 @@ Add the following HTML to your index.html:
  <a href="#" onclick="tool3.activate();">Rect</a>
 ```
 
-This should give you something like what you see in [this demo](http://sdellis.com/svg-draw-component/examples/default.html).
+This should give you something like what you see in [this demo](http://sdellis.com/svg-draw-component/examples/default.html).  Ultimately, we will want to move this code into the component itself, but we will not be able to use the Paper.js functionality until we do a little more setup in our component.  We will explore how to do this later when we talk about [Mixins](/mixins.md).
 

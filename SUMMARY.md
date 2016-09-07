@@ -17,6 +17,7 @@
     * [Binding to the DOM via Element](step-five-define-the-component-interface.md)
     * [Defining Options](step-six-define-options.md)
     * [Events](events.md)
+    * [Mixins](mixins.md)
     * [Templates](templates.md)
 * [Closing Thoughts](conclusion/README.md)
 
