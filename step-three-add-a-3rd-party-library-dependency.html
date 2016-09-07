@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>Step Three: Add a Dependency · GitBook</title>
+        <title>Dependencies · GitBook</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -237,7 +237,7 @@
                 <a href="step-one-boilerplate.html">
             
                     
-                    Step One: Boilerplate
+                    Boilerplate and Setup
             
                 </a>
             
@@ -250,7 +250,7 @@
                 <a href="step-two.html">
             
                     
-                    Step Two: Custom Styles and Images
+                    Custom Styles and Images
             
                 </a>
             
@@ -263,7 +263,7 @@
                 <a href="step-three-add-a-3rd-party-library-dependency.html">
             
                     
-                    Step Three: Add a Dependency
+                    Dependencies
             
                 </a>
             
@@ -276,7 +276,7 @@
                 <a href="step-four-add-a-demo-dependency.html">
             
                     
-                    Step Four: Add a Demo Dependency
+                    Demo Dependencies
             
                 </a>
             
@@ -289,7 +289,46 @@
                 <a href="step-five-define-the-component-interface.html">
             
                     
-                    Step Five: Define the Component Interface
+                    Binding to the DOM via Element
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="step-six-define-options.html">
+            
+                <a href="step-six-define-options.html">
+            
+                    
+                    Defining Options
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="events.html">
+            
+                <a href="events.html">
+            
+                    
+                    Events
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="templates.html">
+            
+                <a href="templates.html">
+            
+                    
+                    Templates
             
                 </a>
             
@@ -345,7 +384,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Step Three: Add a Dependency</a>
+        <a href="." >Dependencies</a>
     </h1>
 </div>
 
@@ -360,7 +399,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="step-three-add-a-dependency">Step Three: Add a Dependency</h1><p>You&apos;ll often want to lean on other libraries like jQuery or lodash to make your life easier.  Here we will improve our developer experience by adding a dependency on the paper.js SVG library.</p><p>Let&apos;s start by adding paper.js as a dependency:</p><p><code>npm install paper --save</code></p><p>This will add it to our package.json file, so it will be included whenever we install the component.</p><p>Next, we need to update our <code>gulpfile.config.js</code>, find the distribution in our node module library, and add the dependency so it gets bundled into our component.</p><pre><code class="lang-js">
+                                <h1 id="dependencies">Dependencies</h1><p>You&apos;ll often want to lean on other libraries like jQuery or lodash to make your life easier.  Here we will improve our developer experience by adding a dependency on the paper.js SVG library.</p><p>Let&apos;s start by adding paper.js as a dependency:</p><p><code>npm install paper --save</code></p><p>This will add it to our package.json file, so it will be included whenever we install the component.</p><p>Next, we need to update our <code>gulpfile.config.js</code>, find the distribution in our node module library, and add the dependency so it gets bundled into our component.</p><pre><code class="lang-js">
 <span class="hljs-comment">// libs that MUST be included in a consuming app for this component to work</span>
 
  <span class="hljs-keyword">this</span>.deps = [
@@ -405,12 +444,12 @@
 
             
                 
-                <a href="step-two.html" class="navigation navigation-prev " aria-label="Previous page: Step Two: Custom Styles and Images">
+                <a href="step-two.html" class="navigation navigation-prev " aria-label="Previous page: Custom Styles and Images">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="step-four-add-a-demo-dependency.html" class="navigation navigation-next " aria-label="Next page: Step Four: Add a Demo Dependency">
+                <a href="step-four-add-a-demo-dependency.html" class="navigation navigation-next " aria-label="Next page: Demo Dependencies">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -421,7 +460,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Step Three: Add a Dependency","level":"1.3.3","depth":2,"next":{"title":"Step Four: Add a Demo Dependency","level":"1.3.4","depth":2,"path":"step-four-add-a-demo-dependency.md","ref":"step-four-add-a-demo-dependency.md","articles":[]},"previous":{"title":"Step Two: Custom Styles and Images","level":"1.3.2","depth":2,"path":"step-two.md","ref":"step-two.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"step-three-add-a-3rd-party-library-dependency.md","mtime":"2016-08-31T16:13:22.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-08-31T16:29:54.696Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Dependencies","level":"1.3.3","depth":2,"next":{"title":"Demo Dependencies","level":"1.3.4","depth":2,"path":"step-four-add-a-demo-dependency.md","ref":"step-four-add-a-demo-dependency.md","articles":[]},"previous":{"title":"Custom Styles and Images","level":"1.3.2","depth":2,"path":"step-two.md","ref":"step-two.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"step-three-add-a-3rd-party-library-dependency.md","mtime":"2016-09-06T17:51:20.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-09-07T15:05:53.577Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -429,10 +468,6 @@
         
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
-    
-        
-        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
