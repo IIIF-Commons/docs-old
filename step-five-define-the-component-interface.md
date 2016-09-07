@@ -39,23 +39,47 @@ Because Paper.js is bundled into our component as a dependent, we should be able
 paper.install(window); 
 var tool1, tool2, tool3;
 
- window.onload = function() { // Get a reference to the canvas object var canvas = document.getElementById('canvas-1'); // Create an empty project and a view for the canvas: paper.setup(canvas); // Both share the mouseDown event: var path; var rectangle = null;
+ window.onload = function() { 
+   // Get a reference to the canvas object 
+   var canvas = document.getElementById('canvas-1'); 
 
- function onMouseDown(event) { path = new Path(); path.strokeColor = 'red'; path.add(event.point); }
+   // Create an empty project and a view for the canvas: 
+   paper.setup(canvas); 
 
- ////////////////// tool1 = new Tool(); tool1.onMouseDown = onMouseDown;
+   // Both share the mouseDown event: 
+   var path; 
+   var rectangle = null;
 
- tool1.onMouseDrag = function(event) { path.add(event.point); }
+   function onMouseDown(event) { 
+    path = new Path(); 
+    path.strokeColor = 'red'; 
+    path.add(event.point); }
 
- ////////////////// tool2 = new Tool(); tool2.minDistance = 20; tool2.onMouseDown = onMouseDown;
+   ////// S T R A I G H T L I N E S ////////
+   tool1 = new Tool(); tool1.onMouseDown = onMouseDown;
 
- tool2.onMouseDrag = function(event) { // Use the arcTo command to draw cloudy lines path.arcTo(event.point); }
+   tool1.onMouseDrag = function(event) { 
+     path.add(event.point); }
 
- ////////////////// tool3 = new Tool(); tool3.onMouseDrag = function(event) { if (rectangle) { rectangle.remove(); } drawRect(event.downPoint, event.point); }
+   ////// C L O U D Y L I N E S ///////// 
+   tool2 = new Tool(); 
+   tool2.minDistance = 20; 
+   tool2.onMouseDown = onMouseDown;
 
- function drawRect(start, end) { rectangle = new Path.Rectangle(start, end); rectangle.strokeColor = 'red'; } };
+   tool2.onMouseDrag = function(event) { 
+       // Use the arcTo command to draw cloudy lines 
+       path.arcTo(event.point); }
 
+   ////// R E C T A N G L E ///////// 
+   tool3 = new Tool(); 
+   tool3.onMouseDrag = function(event) { 
+       if (rectangle) { 
+           rectangle.remove(); } 
+       drawRect(event.downPoint, event.point); }
 
+   function drawRect(start, end) { 
+       rectangle = new Path.Rectangle(start, end); 
+       rectangle.strokeColor = 'red'; } };
 
 ```
 
