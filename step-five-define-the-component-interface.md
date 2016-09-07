@@ -7,6 +7,7 @@ Let's start by setting a default element that our component will bind to.  Since
 Let's go ahead and add `<div id="svgdraw"></div>` to the example document and make sure we are binding the component the the element \(specified in base-component\) when we create it like this:
 
 ```
+var svgdraw;
 svgdraw = new IIIFComponents.SvgDrawComponent({
  element: "#svgdraw"
 });

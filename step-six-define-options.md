@@ -23,6 +23,8 @@ namespace IIIFComponents {
 
 Interfaces are one of the features TypeScript gives us, and they are used to type-check arguments.  In other words, Interfaces make sure that the values we pass are what is expected by the method.  More details can be found in the [Interfaces section of the TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/interfaces.html).
 
+Finally, we'll have to pass in the option when we create the component instance.  Add an overlay 
+
 We can do a quick test to make sure our option is coming through.  Remember the "I am an example component..." message from the boilerplate?  Well, you can do something similar in the \_init\(\) function by appending the value to the \_$element:
 
 ```
@@ -31,4 +33,6 @@ We can do a quick test to make sure our option is coming through.  Remember the 
     return success
 }
 ```
+
+When you refresh the page, you should see the characters "img" at the top of the document.  Now that we've seen it works, we can remove this line from the init\(\) function.
 
