@@ -4,7 +4,7 @@ The base-component provides an "element" option that allows us to bind our compo
 
 Let's start by setting a default element that our component will bind to.  Since this is about drawing, our component will be adding a canvas to the document.  It would be convenient for us to obtain the dimensions of the canvas from the default element, so let's bind it to a &lt;div&gt;, allowing us to work easily with a simple canvas, a basic image overlay, or OpenSeadragon overlay canvases.
 
-Let's go ahead and add `<div id="svgdraw"></div>` to the example document and make sure we are binding the component the the element \(specified in base-component\) when we create it like this:
+In the `examples/index.html` page, let's change the `<div id="component"></div>` to `<div id="svgdraw"></div>` and make sure we are binding the \#svgdraw element by changing the new instance to this:
 
 ```
 var svgdraw;
