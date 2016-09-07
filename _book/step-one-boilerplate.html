@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>Step One: Boilerplate · GitBook</title>
+        <title>Boilerplate and Setup · GitBook</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -237,7 +237,7 @@
                 <a href="step-one-boilerplate.html">
             
                     
-                    Step One: Boilerplate
+                    Boilerplate and Setup
             
                 </a>
             
@@ -250,7 +250,7 @@
                 <a href="step-two.html">
             
                     
-                    Step Two: Custom Styles and Images
+                    Custom Styles and Images
             
                 </a>
             
@@ -263,7 +263,7 @@
                 <a href="step-three-add-a-3rd-party-library-dependency.html">
             
                     
-                    Step Three: Add a Dependency
+                    Dependencies
             
                 </a>
             
@@ -276,7 +276,7 @@
                 <a href="step-four-add-a-demo-dependency.html">
             
                     
-                    Step Four: Add a Demo Dependency
+                    Demo Dependencies
             
                 </a>
             
@@ -289,7 +289,46 @@
                 <a href="step-five-define-the-component-interface.html">
             
                     
-                    Step Five: Define the Component Interface
+                    Binding to the DOM via Element
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="step-six-define-options.html">
+            
+                <a href="step-six-define-options.html">
+            
+                    
+                    Defining Options
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="events.html">
+            
+                <a href="events.html">
+            
+                    
+                    Events
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="templates.html">
+            
+                <a href="templates.html">
+            
+                    
+                    Templates
             
                 </a>
             
@@ -345,7 +384,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Step One: Boilerplate</a>
+        <a href="." >Boilerplate and Setup</a>
     </h1>
 </div>
 
@@ -360,10 +399,10 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="step-one-boilerplate">Step One: Boilerplate</h1><p>To start, we are going to replicate the <code>component-boilerplate</code> and use it as a starting template for our component. The easiest way to do this is to simply clone component-boilerplate, delete the .git directory, then git init, git add ., and git commit. After doing this, I followed <a href="https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/" target="_blank">these instructions for creating my own remote GitHub repo for the component from the command line</a>. Once we have replicated the component and created our own repository, we can run:</p><pre><code>npm install
+                                <h1 id="boilerplate-and-setup">Boilerplate and Setup</h1><p>To start, we are going to replicate the <code>component-boilerplate</code> and use it as a starting template for our component. The easiest way to do this is to simply clone component-boilerplate, delete the .git directory, then git init, git add ., and git commit. After doing this, I followed <a href="https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/" target="_blank">these instructions for creating my own remote GitHub repo for the component from the command line</a>. Once we have replicated the component and created our own repository, we can run:</p><pre><code>npm install
 gulp
 gulp examples</code></pre>
-<p>Then, if we point our browser to <a href="http://localhost:8080" target="_blank">http://localhost:8080</a> we should get the javascript alert to ensure that the example demo works. Finally, we replace all instances of &quot;ExampleComponent&quot; with the name of our new component called &quot;SvgDraw&quot;. Make sure the example demo still works after I&apos;ve made those changes.</p>
+<p>Then, if we point our browser to <a href="http://localhost:8080" target="_blank">http://localhost:8080</a> we should get the javascript alert to ensure that the example demo works. Finally, we replace all instances of &quot;ExampleComponent&quot; with the name of our new component called &quot;SvgDraw&quot;, as well as replacing the namespacing from &quot;MyComponents&quot; to &quot;IIIFComponents&quot;. Make sure the example demo still works after I&apos;ve made those changes.</p>
                                 
                                 </section>
                             
@@ -395,7 +434,7 @@ gulp examples</code></pre>
                 </a>
                 
                 
-                <a href="step-two.html" class="navigation navigation-next " aria-label="Next page: Step Two: Custom Styles and Images">
+                <a href="step-two.html" class="navigation navigation-next " aria-label="Next page: Custom Styles and Images">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -406,7 +445,7 @@ gulp examples</code></pre>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Step One: Boilerplate","level":"1.3.1","depth":2,"next":{"title":"Step Two: Custom Styles and Images","level":"1.3.2","depth":2,"path":"step-two.md","ref":"step-two.md","articles":[]},"previous":{"title":"Tutorial","level":"1.3","depth":1,"path":"tutorial.md","ref":"tutorial.md","articles":[{"title":"Step One: Boilerplate","level":"1.3.1","depth":2,"path":"step-one-boilerplate.md","ref":"step-one-boilerplate.md","articles":[]},{"title":"Step Two: Custom Styles and Images","level":"1.3.2","depth":2,"path":"step-two.md","ref":"step-two.md","articles":[]},{"title":"Step Three: Add a Dependency","level":"1.3.3","depth":2,"path":"step-three-add-a-3rd-party-library-dependency.md","ref":"step-three-add-a-3rd-party-library-dependency.md","articles":[]},{"title":"Step Four: Add a Demo Dependency","level":"1.3.4","depth":2,"path":"step-four-add-a-demo-dependency.md","ref":"step-four-add-a-demo-dependency.md","articles":[]},{"title":"Step Five: Define the Component Interface","level":"1.3.5","depth":2,"path":"step-five-define-the-component-interface.md","ref":"step-five-define-the-component-interface.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"step-one-boilerplate.md","mtime":"2016-08-31T16:28:13.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-08-31T16:29:54.696Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Boilerplate and Setup","level":"1.3.1","depth":2,"next":{"title":"Custom Styles and Images","level":"1.3.2","depth":2,"path":"step-two.md","ref":"step-two.md","articles":[]},"previous":{"title":"Tutorial","level":"1.3","depth":1,"path":"tutorial.md","ref":"tutorial.md","articles":[{"title":"Boilerplate and Setup","level":"1.3.1","depth":2,"path":"step-one-boilerplate.md","ref":"step-one-boilerplate.md","articles":[]},{"title":"Custom Styles and Images","level":"1.3.2","depth":2,"path":"step-two.md","ref":"step-two.md","articles":[]},{"title":"Dependencies","level":"1.3.3","depth":2,"path":"step-three-add-a-3rd-party-library-dependency.md","ref":"step-three-add-a-3rd-party-library-dependency.md","articles":[]},{"title":"Demo Dependencies","level":"1.3.4","depth":2,"path":"step-four-add-a-demo-dependency.md","ref":"step-four-add-a-demo-dependency.md","articles":[]},{"title":"Binding to the DOM via Element","level":"1.3.5","depth":2,"path":"step-five-define-the-component-interface.md","ref":"step-five-define-the-component-interface.md","articles":[]},{"title":"Defining Options","level":"1.3.6","depth":2,"path":"step-six-define-options.md","ref":"step-six-define-options.md","articles":[]},{"title":"Events","level":"1.3.7","depth":2,"path":"events.md","ref":"events.md","articles":[]},{"title":"Templates","level":"1.3.8","depth":2,"path":"templates.md","ref":"templates.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"step-one-boilerplate.md","mtime":"2016-09-07T14:16:47.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-09-07T15:05:53.577Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -414,10 +453,6 @@ gulp examples</code></pre>
         
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
-    
-        
-        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
