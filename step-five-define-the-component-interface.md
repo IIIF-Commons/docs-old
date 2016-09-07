@@ -83,3 +83,5 @@ var tool1, tool2, tool3;
 
 ```
 
+This should give you something like what you see in [this demo](http://sdellis.com/svg-draw-component/examples/default.html).
+
