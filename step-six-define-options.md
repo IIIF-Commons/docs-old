@@ -23,7 +23,14 @@ namespace IIIFComponents {
 
 Interfaces are one of the features TypeScript gives us, and they are used to type-check arguments.  In other words, Interfaces make sure that the values we pass are what is expected by the method.  More details can be found in the [Interfaces section of the TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/interfaces.html).
 
-Finally, we'll have to pass in the option when we create the component instance.  Add an overlay 
+Finally, we'll have to pass in the option when we create the component instance.  Let's add an overlayType property to the config object and give it a value of "img":
+
+```
+svgdraw = new IIIFComponents.SvgDrawComponent({ 
+    element: "#svgdraw", 
+    overlayType: "img" // <-- add this line
+});
+```
 
 We can do a quick test to make sure our option is coming through.  Remember the "I am an example component..." message from the boilerplate?  Well, you can do something similar in the \_init\(\) function by appending the value to the \_$element:
 
