@@ -1,16 +1,25 @@
 # Custom Styles and Images
 
-Since I know that I'm going to want to have some custom CSS and icons for my component, the next thing I do is create the following two directories in the `src` directory: `css` and `img` . I create a simple `styles.less` file in `css` that looks like this:
+## Create custom styles with LESS
+
+Since I know that I'm going to want to have some custom CSS and icons for my component, the next thing I do is create the following two directories in the `src` directory: `css` and `img` . I create a simple `styles.less` file in `css` and add a `.paper` class to style our canvas like so:
 
 ```css
 @img-path: "../img/"
 
 .svg-draw-component{
-    //someplace to put component-specific css (perhaps put the viewdir logo here?).
+    /* someplace to put component-specific css */
+    .paper{
+        width:800px; height:600px;
+        margin:20px 60px;
+        border:1px solid blue;
+        background-color: rgba\(158, 167, 184, 0.2\);}
 }
 ```
 
 We can leave the `img` directory blank for now.
+
+## Configure gulp to compile LESS styles on build
 
 In order for the less file to be compiled into css, we need to add a npm module called `gulp-less` and we also need to add gulp tasks to ensure the compiled css files are copied into the appropriate location in `examples` when our build runs. To add the gulp-less npm module to the package.json devDependencies, type the following npm command:
 
