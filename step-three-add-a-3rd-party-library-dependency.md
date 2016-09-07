@@ -23,7 +23,7 @@ Next, we need to update our `gulpfile.config.js`, find the distribution in our n
 
 \(We are using the full, compiled version of paper.js.\)
 
-Finally, let's test it out in the examples demo.  Go ahead and add the following code in the `<body>` tag of the `index.html` file and refresh the page:
+Finally, let's test it out in the examples demo.  If we include the bundled code, and add some paper.js test code in the `<body>` tag of the `index.html` file and refresh the page:
 
 ```js
 <head>
