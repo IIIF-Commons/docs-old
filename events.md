@@ -1,8 +1,6 @@
 # Events
 
-Events are the way components communicate with one another.  In order for Component B to know what's going on with Component A, it listens for events.  In order for Component A to know what's happening on the DOM, it has to listen for events as well.
+Often the state of one component will need to change, based on what is happening in other components.  Events are the way components communicate with one another.  In order for Component B to know what's going on with Component A, it listens for events.  However, Component A does not necessarily know how or what to listen to from Component B.  Therefore, every unique combination of components will need its own custom pubsub library that can be used to publish events and register subscribers.  The [BaseCommands definition for the Universal Viewer](https://github.com/UniversalViewer/universalviewer/blob/dev/src/modules/uv-shared-module/BaseCommands.ts) defines all the commands and their associated event identifiers so UV components can listen for these events.
 
-> Question for Ed:
-> 
-> In order for a component to pick up events from another component, it needs to know what to look for.  In the svg-draw-component example and event should be emitted when a shape is selected \(or completed\) so that another component can listen for that and do something.  For example, an annotation authoring component should listen for events that announce the creation of an object that an annotation can be attached to.  How does the annotation authoring component know what to listen for?
+
 
