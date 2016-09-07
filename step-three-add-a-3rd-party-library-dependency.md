@@ -26,6 +26,11 @@ Next, we need to update our `gulpfile.config.js`, find the distribution in our n
 Finally, let's test it out in the examples demo.  Go ahead and add the following code in the `<body>` tag of the `index.html` file and refresh the page:
 
 ```js
+<head>
+...
+   <script src="js/svg-draw-component.bundle.js"></script>
+...
+</head>
 ...
  <script type="text/paperscript" canvas="myCanvas">
      var path = new Path();
