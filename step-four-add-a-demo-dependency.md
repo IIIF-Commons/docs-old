@@ -1,4 +1,4 @@
-# Step Four:  Add a Demo Dependency
+# Demo Dependencies
 
 Of course, no component repository is complete without a demo.  We often want to show how our component will coexist and interact with other libraries and components.  In this case, I would like to demonstrate how one can use the library to create overlays in OpenSeadragon \(OSD\).
 
