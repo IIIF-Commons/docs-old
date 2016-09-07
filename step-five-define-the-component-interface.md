@@ -32,7 +32,7 @@ svgdraw = new IIIFComponents.SvgDrawComponent({
 
 ```
 
-Because Paper.js is bundled into our component as a dependent, we should be able to add the following code just below where we declare our `svgdraw` variable and get some basic drawing functionality:
+Because Paper.js is bundled into our component as a dependent, we should be able to add the following code just below where we declare our `svgdraw` variable.  This will add three drawing tools that we can use to draw on the canvas.:
 
 ```js
 
@@ -81,6 +81,14 @@ var tool1, tool2, tool3;
        rectangle = new Path.Rectangle(start, end); 
        rectangle.strokeColor = 'red'; } };
 
+```
+
+Add the following HTML to your index.html:
+
+```
+ <a href="#" onclick="tool1.activate();">Lines</a> |
+ <a href="#" onclick="tool2.activate();">Clouds</a> |
+ <a href="#" onclick="tool3.activate();">Rect</a>
 ```
 
 This should give you something like what you see in [this demo](http://sdellis.com/svg-draw-component/examples/default.html).
