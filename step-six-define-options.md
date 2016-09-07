@@ -1,8 +1,8 @@
 # Defining Options
 
-Now we want to be able to create a drawing canvas, with the additional _options_ to overlay it onto an image or add it as an OpenSeaDragon overlay. Because the setup and the css is slightly different for these scenarios, let's go ahead and add an optional parameter to set the overlay type.  
+Now we want to be able to create a drawing canvas, with the additional _options_ to overlay it onto an image or add it as an OpenSeaDragon overlay. Because the setup and the css is slightly different for these scenarios, let's go ahead and add an optional parameter to set the overlay type.
 
-Create Options Interfaces
+## Create options interfaces
 
 In the `ISvgDrawComponentOptions.ts` file, let's add an `overlayType` parameter:
 
@@ -27,6 +27,8 @@ namespace IIIFComponents {
 
 Interfaces are one of the features TypeScript gives us, and they are used to type-check arguments.  In other words, Interfaces make sure that the values we pass are what is expected by the method.  More details can be found in the [Interfaces section of the TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/interfaces.html).
 
+## Define the option upon creation
+
 Finally, we'll have to pass in the option when we create the component instance.  Let's add an `overlayType` property to the config object and give it a value of "img":
 
 ```
@@ -35,6 +37,8 @@ svgdraw = new IIIFComponents.SvgDrawComponent({
     overlayType: "img" // <-- add this line
 });
 ```
+
+## Make sure it's working
 
 We can do a quick test to make sure our option is coming through.  Remember the "I am an example component..." message from the boilerplate?  Well, you can do something similar in the \_init\(\) function by appending the value to the \_$element:
 
