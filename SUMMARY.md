@@ -19,5 +19,6 @@
     * [Events](events.md)
     * [Mixins](mixins.md)
     * [Templates](templates.md)
+    * [Debugging](debugging.md)
 * [Closing Thoughts](conclusion/README.md)
 
