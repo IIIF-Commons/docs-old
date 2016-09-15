@@ -1,6 +1,6 @@
 # Debugging
 
-Debugging JavaScript is not always straightforward.  Fortunately, there are a few things you can do to make your life easier and understand the flow and functioning of a program.  We can start by using some of the developer tools in Google Chrome, although similar tools exist for most other browsers.
+Debugging JavaScript is not always straightforward.  Fortunately, there are a few things you can do to make your life easier when you hit errors or see output you don't expect.  We can start by using some of the developer tools in Google Chrome, although similar tools exist for most other browsers.
 
 ## Generating Non-bundled Output files
 
@@ -10,4 +10,3 @@ Minified JavaScript helps us to reduce the size of our code in production, but i
 <script type="text/javascript" src="js/etch.bundle.js"></script>
 <script src="js/etch-component-test.js">
 ```
-
