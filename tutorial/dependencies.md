@@ -38,7 +38,7 @@ Finally, let's test it out in the examples demo.  If we include the bundled code
      var start = new Point(100, 100);
      path.moveTo(start);
      path.lineTo(start + [ 100, -50 ]);
- </script> 
+ </script>
  <canvas id="myCanvas" resize></canvas>
 ...
 ```
@@ -46,4 +46,3 @@ Finally, let's test it out in the examples demo.  If we include the bundled code
 You should see a diagonal line drawn on the screen that looks like this:
 
 ![](/assets/paperjs-example.png)
-

@@ -29,7 +29,7 @@ Now, we will create our gulp tasks. I add the following lines to the `tasks/copy
 
 ```js
 gulp.task('copy:css', function() {
- return gulp.src([path.join(config.dist, config.cssOut)]).pipe(gulp.dest(config.examplesCssDir)); 
+ return gulp.src([path.join(config.dist, config.cssOut)]).pipe(gulp.dest(config.examplesCssDir));
 });
 
 gulp.task('copy:img',other function() {
@@ -45,7 +45,7 @@ var config = new c();
 var gulp = require('gulp');
 var less = require('gulp-less');
 var path = require('path');
-var rename = require('gulp-rename'); 
+var rename = require('gulp-rename');
 
 gulp.task('less', function () {
  return gulp.src(config.cssSrc)
@@ -68,4 +68,3 @@ And add our `copy:css` and `copy:img` tasks to the 'sync' task:
 ```js
 gulp.task('sync', ['copy:bundle', 'copy:css', 'copy:img', 'copy:typings']);
 ```
-
