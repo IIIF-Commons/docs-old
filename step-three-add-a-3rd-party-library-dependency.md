@@ -14,7 +14,7 @@ You'll often want to lean on other libraries like jQuery or lodash to make your 
 } 
 </style> 
 
-<div class="heads-up">Hello World</div>
+<div class="heads-up">Heads-Up!</div>
 
 
 Let's start by adding paper.js as a dependency:
