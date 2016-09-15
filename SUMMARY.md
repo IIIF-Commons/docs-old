@@ -20,5 +20,6 @@
     * [Mixins](mixins.md)
     * [Templates](templates.md)
     * [Debugging](debugging.md)
+    * [Testing](testing.md)
 * [Closing Thoughts](conclusion/README.md)
 
