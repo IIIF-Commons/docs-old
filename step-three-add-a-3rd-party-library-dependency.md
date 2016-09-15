@@ -2,6 +2,21 @@
 
 You'll often want to lean on other libraries like jQuery or lodash to make your life easier.  Here we will improve our developer experience by adding a dependency on the paper.js SVG library.
 
+<style> 
+.heads-up {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+} 
+</style> 
+
+<div class="heads-up">Hello World</div>
+
+
 Let's start by adding paper.js as a dependency:
 
 `npm install paper --save`
