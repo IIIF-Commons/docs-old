@@ -8,7 +8,7 @@ Unfortunately, as it turns out, Paper.js uses an architecture that makes everyth
 <div class="heads-up">
 <strong>Heads up!</strong>
 <p>Some libraries are created using a pattern that conflicts with Viewdir's approach to
-component design. When a library creates a global, singleton API, we are not able to create new instances.  This goes against the assumption that we can have multiple instances of web components on a page.  Before committing to a library, you should identify whether or not it uses this pattern by doing a simple test (Devs:can we make a JSFiddle for this?).  More on the singleton pattern can be found in <a href="https://addyosmani.com/resources/essentialjsdesignpatterns/book/#singletonpatternjavascript">Addy Osmani's JavaScript Design Patterns</a>.</p>
+component design. When a library creates a global, singleton API, we are not able to create new instances.  This goes against the assumption that we can have multiple instances of web components on a page.  This does not mean that we can't use these libraries.  We just can't include them as Mixins.  More on the singleton pattern can be found in <a href="https://addyosmani.com/resources/essentialjsdesignpatterns/book/#singletonpatternjavascript">Addy Osmani's JavaScript Design Patterns</a>.</p>
 </div>
 
- Luckily, Ed Silverton has created a library called Etch, turned it into a component, and provided us with an example.
+An example of a drawing library that can be included as a Mixin would be Etch.  Here's an [example component that demonstrates how Etch can be used as a mixin](https://github.com/edsilv/etch-component-test).

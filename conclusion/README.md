@@ -9,7 +9,7 @@ This book will continue to evolve along with the corresponding tools and techniq
 * [Web Components Best Practices](http://webcomponents.org/articles/web-components-best-practices/)
 
 ## Feedback
-If there was anything that was unclear, incorrect, missing, or could be improved on the book itself, we want to hear about it from you. The best way to issue feedback is to [open a GitHub issue](https://github.com/viewdir/viewdir.github.io/issues/new) so one of the authors can address it.
+We understand the need to keep our documentation up to date. If there was anything that was unclear, incorrect, missing, or could be improved on the book itself, we want to hear about it from you. The best way to issue feedback is to [open a GitHub issue](https://github.com/viewdir/viewdir.github.io/issues/new) so one of the authors can address it.
 
 ## Get Involved
-If you would like to get involved with ViewDir as a developer, designer, tester, documenter, or anything else you don't need permission.  Get in touch!  If you'd like to add to or edit this book, please make a pull request. You may find the [GitBook documentation helpful](https://starlying.gitbooks.io/gitbook-1/content/), and [we posted some basic instructions](https://github.com/viewdir/viewdir.github.io/blob/book/NOTES.md) for making changes to this book.
+If you would like to get involved with ViewDir as a developer, designer, tester, documenter, or anything else you don't need permission.  Get in touch!  If you'd like to add to or edit this book, please make a pull request. You may find the [GitBook documentation helpful](https://starlying.gitbooks.io/gitbook-1/content/), and [we posted some basic instructions](https://github.com/viewdir/viewdir.github.io/blob/book/NOTES.md) for making changes to this book.  General thoughts and feedback on Viewdir can be submitted as issues to our [NOTES repository](https://github.com/viewdir/notes). 
