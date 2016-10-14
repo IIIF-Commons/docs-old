@@ -9,6 +9,8 @@
     * [base-component](libraries/BASE-COMPONENT.md)
     * [component-boilerplate](libraries/COMPONENT-BOILERPLATE.md)
     * [iiif-tree-component](libraries/IIIF-TREE-COMPONENT.md)
+    * [iiif-gallery-component](libraries/IIIF-GALLERY-COMPONENT.md)
+    * [iiif-metadata-component](libraries/IIIF-METADATA-COMPONENT.md)
     * [svg-draw-component](libraries/SVG-DRAW-COMPONENT.md)
 * [Tutorial](tutorial/README.md)
     * [Boilerplate and Setup](tutorial/boilerplate.md)
