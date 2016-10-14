@@ -215,7 +215,33 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.6" data-path="../libraries/SVG-DRAW-COMPONENT.html">
+        <li class="chapter " data-level="1.2.6" data-path="../libraries/IIIF-GALLERY-COMPONENT.html">
+            
+                <a href="../libraries/IIIF-GALLERY-COMPONENT.html">
+            
+                    
+                    iiif-gallery-component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../libraries/IIIF-METADATA-COMPONENT.html">
+            
+                <a href="../libraries/IIIF-METADATA-COMPONENT.html">
+            
+                    
+                    iiif-metadata-component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../libraries/SVG-DRAW-COMPONENT.html">
             
                 <a href="../libraries/SVG-DRAW-COMPONENT.html">
             
@@ -454,7 +480,9 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="events">Events</h1>
-<p>Often the state of one component will need to change, based on what is happening in other components.  Events are the way components communicate with one another.  In order for Component B to know what&apos;s going on with Component A, it listens for events.  However, Component A does not necessarily know how or what to listen to from Component B.  Therefore, every unique combination of components will need its own custom pubsub library that can be used to publish events and register subscribers.  The <a href="https://github.com/UniversalViewer/universalviewer/blob/dev/src/modules/uv-shared-module/BaseCommands.ts" target="_blank">BaseCommands definition for the Universal Viewer</a> defines all the commands and their associated event identifiers so UV components can listen for these events.</p>
+<p>Often the state of one component will need to change, based on what is happening in other components.  Events are the way components communicate with one another.  In order for Component B to know what&apos;s going on with Component A, it listens for events.  </p>
+<p>To see events in action, take a look at how the iiif-gallery-component updates its state based on the iiif-tree-component <em>treeNodeSelected</em> event in <a href="http://jsbin.com/xesare/edit?html,css,output" target="_blank">this jsbin example</a>. You can also see the kind of data passed via the svg-draw-component&apos;s events flashing on the page as you create and edit shapes in <a href="https://viewdir.github.io/svg-draw-component/examples/img.html" target="_blank">the demo</a>.</p>
+<p>However, Component A does not necessarily know how or what to listen to from Component B.  Therefore, every unique combination of components will need its own custom pubsub library that can be used to publish events and register subscribers.  The <a href="https://github.com/UniversalViewer/universalviewer/blob/dev/src/modules/uv-shared-module/BaseCommands.ts" target="_blank">BaseCommands definition for the Universal Viewer</a> defines all the commands and their associated event identifiers so UV components can listen for these events.</p>
 <h2 id="tiny-pubsub">Tiny PubSub</h2>
 <p>Currently, the base-component is outfitted with <a href="https://github.com/edsilv/jquery-tiny-pubsub" target="_blank">a fork of the Tiny PubSub</a> jQuery plugin.  This is <a href="https://github.com/viewdir/base-component/blob/master/src/BaseComponent.ts#L51" target="_blank">mixed into the the base-component</a> and allows all components that extend the base-component to emit events.</p>
 
@@ -500,7 +528,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Events","level":"1.3.7","depth":2,"next":{"title":"Mixins","level":"1.3.8","depth":2,"path":"tutorial/mixins.md","ref":"tutorial/mixins.md","articles":[]},"previous":{"title":"Defining Options","level":"1.3.6","depth":2,"path":"tutorial/options.md","ref":"tutorial/options.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"tutorial/events.md","mtime":"2016-09-07T20:26:49.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-10-14T20:34:06.499Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Events","level":"1.3.7","depth":2,"next":{"title":"Mixins","level":"1.3.8","depth":2,"path":"tutorial/mixins.md","ref":"tutorial/mixins.md","articles":[]},"previous":{"title":"Defining Options","level":"1.3.6","depth":2,"path":"tutorial/options.md","ref":"tutorial/options.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"tutorial/events.md","mtime":"2016-10-14T21:40:54.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-10-14T21:30:22.210Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
