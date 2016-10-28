@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>manifesto · GitBook</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>manifesto · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.2.2">
         
         
         
@@ -33,6 +33,8 @@
     
 
     
+        
+        <link rel="stylesheet" href="../styles/website.css">
         
     
         
@@ -213,12 +215,213 @@
             
         </li>
     
+        <li class="chapter " data-level="1.2.6" data-path="IIIF-GALLERY-COMPONENT.html">
+            
+                <a href="IIIF-GALLERY-COMPONENT.html">
+            
+                    
+                    iiif-gallery-component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="IIIF-METADATA-COMPONENT.html">
+            
+                <a href="IIIF-METADATA-COMPONENT.html">
+            
+                    
+                    iiif-metadata-component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="SVG-DRAW-COMPONENT.html">
+            
+                <a href="SVG-DRAW-COMPONENT.html">
+            
+                    
+                    svg-draw-component
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="../conclusion/">
+        <li class="chapter " data-level="1.3" data-path="../tutorial/">
+            
+                <a href="../tutorial/">
+            
+                    
+                    Tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../tutorial/boilerplate.html">
+            
+                <a href="../tutorial/boilerplate.html">
+            
+                    
+                    Boilerplate and Setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../tutorial/styles.html">
+            
+                <a href="../tutorial/styles.html">
+            
+                    
+                    Custom Styles and Images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../tutorial/dependencies.html">
+            
+                <a href="../tutorial/dependencies.html">
+            
+                    
+                    Dependencies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../tutorial/demo-dependencies.html">
+            
+                <a href="../tutorial/demo-dependencies.html">
+            
+                    
+                    Demo Dependencies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../tutorial/binding-to-the-dom.html">
+            
+                <a href="../tutorial/binding-to-the-dom.html">
+            
+                    
+                    Binding to the DOM via Element
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../tutorial/options.html">
+            
+                <a href="../tutorial/options.html">
+            
+                    
+                    Defining Options
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../tutorial/events.html">
+            
+                <a href="../tutorial/events.html">
+            
+                    
+                    Events
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../tutorial/mixins.html">
+            
+                <a href="../tutorial/mixins.html">
+            
+                    
+                    Mixins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../tutorial/templates.html">
+            
+                <a href="../tutorial/templates.html">
+            
+                    
+                    Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../tutorial/debugging.html">
+            
+                <a href="../tutorial/debugging.html">
+            
+                    
+                    Debugging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../tutorial/testing.html">
+            
+                <a href="../tutorial/testing.html">
+            
+                    
+                    Testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../conclusion/">
             
                 <a href="../conclusion/">
             
@@ -276,23 +479,26 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="manifesto">manifesto</h1><p><a href="https://github.com/viewdir/manifesto" target="_blank">https://github.com/viewdir/manifesto</a></p><p>Manifesto is an isomorphic node.js library designed to make working with IIIF Presentation API manifests easy on the client and server side. The current feature set includes:</p><ul><li>Loading and parsing manifests into a convenient object model
-</li>
-<li>IIIF Auth API implementation
-</li>
-<li>&#x2018;IxIF&#x2019; support for non image-based resources (not currently a recommended specification)
-</li>
-<li>Tree hierarchy generation from ranges
-</li>
-<li>Localisation support
-</li>
-<li>Lazy loading of sub manifests/collections
-</li></ul>
-<p>Possible future features to be added by community:</p><ul><li>Setter functions to allow building manifests programmatically
-</li>
-<li>Serialisation of the object model back to JSON-LD
-</li></ul>
-<p>Manifesto is written in TypeScript which allows static typing. This makes it easy to catch coding errors at compile time and makes the project very resilient to refactors. There is also a well maintained mocha test suite.</p><p><a href="http://viewdir.github.io/manifesto-docs/" target="_blank">Documentation</a></p><p><a href="http://blog.edsilv.com/manifesto/" target="_blank">Tutorial</a></p>
+                                <h1 id="manifesto">manifesto</h1>
+<p><a href="https://github.com/viewdir/manifesto" target="_blank">https://github.com/viewdir/manifesto</a></p>
+<p>Manifesto is an isomorphic node.js library designed to make working with IIIF Presentation API manifests easy on the client and server side. The current feature set includes:</p>
+<ul>
+<li>Loading and parsing manifests into a convenient object model</li>
+<li>IIIF Auth API implementation</li>
+<li>&#x2018;IxIF&#x2019; support for non image-based resources (not currently a recommended specification)</li>
+<li>Tree hierarchy generation from ranges</li>
+<li>Localisation support</li>
+<li>Lazy loading of sub manifests/collections</li>
+</ul>
+<p>Possible future features to be added by community:</p>
+<ul>
+<li>Setter functions to allow building manifests programmatically</li>
+<li>Serialisation of the object model back to JSON-LD</li>
+</ul>
+<p>Manifesto is written in TypeScript which allows static typing. This makes it easy to catch coding errors at compile time and makes the project very resilient to refactors. There is also a well maintained mocha test suite.</p>
+<p><a href="http://viewdir.github.io/manifesto-docs/" target="_blank">Documentation</a></p>
+<p><a href="http://blog.edsilv.com/manifesto/" target="_blank">Tutorial</a></p>
+
                                 
                                 </section>
                             
@@ -335,7 +541,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"manifesto","level":"1.2.1","depth":2,"next":{"title":"manifold","level":"1.2.2","depth":2,"path":"libraries/MANIFOLD.md","ref":"libraries/MANIFOLD.md","articles":[]},"previous":{"title":"Libraries","level":"1.2","depth":1,"path":"libraries/README.md","ref":"libraries/README.md","articles":[{"title":"manifesto","level":"1.2.1","depth":2,"path":"libraries/MANIFESTO.md","ref":"libraries/MANIFESTO.md","articles":[]},{"title":"manifold","level":"1.2.2","depth":2,"path":"libraries/MANIFOLD.md","ref":"libraries/MANIFOLD.md","articles":[]},{"title":"base-component","level":"1.2.3","depth":2,"path":"libraries/BASE-COMPONENT.md","ref":"libraries/BASE-COMPONENT.md","articles":[]},{"title":"component-boilerplate","level":"1.2.4","depth":2,"path":"libraries/COMPONENT-BOILERPLATE.md","ref":"libraries/COMPONENT-BOILERPLATE.md","articles":[]},{"title":"iiif-tree-component","level":"1.2.5","depth":2,"path":"libraries/IIIF-TREE-COMPONENT.md","ref":"libraries/IIIF-TREE-COMPONENT.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"libraries/MANIFESTO.md","mtime":"2016-08-30T13:28:32.900Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-08-30T13:49:23.891Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"manifesto","level":"1.2.1","depth":2,"next":{"title":"manifold","level":"1.2.2","depth":2,"path":"libraries/MANIFOLD.md","ref":"libraries/MANIFOLD.md","articles":[]},"previous":{"title":"Libraries","level":"1.2","depth":1,"path":"libraries/README.md","ref":"libraries/README.md","articles":[{"title":"manifesto","level":"1.2.1","depth":2,"path":"libraries/MANIFESTO.md","ref":"libraries/MANIFESTO.md","articles":[]},{"title":"manifold","level":"1.2.2","depth":2,"path":"libraries/MANIFOLD.md","ref":"libraries/MANIFOLD.md","articles":[]},{"title":"base-component","level":"1.2.3","depth":2,"path":"libraries/BASE-COMPONENT.md","ref":"libraries/BASE-COMPONENT.md","articles":[]},{"title":"component-boilerplate","level":"1.2.4","depth":2,"path":"libraries/COMPONENT-BOILERPLATE.md","ref":"libraries/COMPONENT-BOILERPLATE.md","articles":[]},{"title":"iiif-tree-component","level":"1.2.5","depth":2,"path":"libraries/IIIF-TREE-COMPONENT.md","ref":"libraries/IIIF-TREE-COMPONENT.md","articles":[]},{"title":"iiif-gallery-component","level":"1.2.6","depth":2,"path":"libraries/IIIF-GALLERY-COMPONENT.md","ref":"libraries/IIIF-GALLERY-COMPONENT.md","articles":[]},{"title":"iiif-metadata-component","level":"1.2.7","depth":2,"path":"libraries/IIIF-METADATA-COMPONENT.md","ref":"libraries/IIIF-METADATA-COMPONENT.md","articles":[]},{"title":"svg-draw-component","level":"1.2.8","depth":2,"path":"libraries/SVG-DRAW-COMPONENT.md","ref":"libraries/SVG-DRAW-COMPONENT.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"libraries/MANIFESTO.md","mtime":"2016-09-06T17:40:12.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-10-14T21:30:22.210Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
