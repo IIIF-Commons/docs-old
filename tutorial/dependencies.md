@@ -1,8 +1,8 @@
 # Dependencies
 
-You'll often want to lean on other libraries like jQuery or lodash to make your life easier.
+We made a conscious effort to allow as much flexibility as possible when creating components.  We don't subscribe to any particular framework, however, many components are built assuming jQuery, jsViews (for templating), and Redux (for state management).  You can include these outside of your "bundled" component as other components will use them and we can cut down on bundling redundant code.
 
-Let's go ahead and add paper.js as a dependency:
+However, for this particular component, we will want to use a third-party library that already handles the complexities of SVG drawing functions.  Why reinvent the wheel?  Let's go ahead and add Paper.js, a vector graphics scripting framework, as a svg-draw-component dependency:
 
 `npm install paper --save`
 
@@ -21,7 +21,7 @@ Next, we need to update our `gulpfile.config.js`, find the distribution in our n
 
 ```
 
-\(We are using the full, compiled version of paper.js.\)
+(We are using the full, compiled version of paper.js.)
 
 Finally, let's test it out in the examples demo.  If we include the bundled code, and add some paper.js test code in the `<body>` tag of the `index.html` file and refresh the page:
 

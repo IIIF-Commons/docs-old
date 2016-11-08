@@ -1,18 +1,18 @@
-# Binding to the DOM via _Element_
+# Rendering to the DOM via _Element_
 
-The base-component provides an "element" option that allows us to bind our component to the DOM.
+The base-component provides an "element" option that allows us to render our component to the DOM.
 
-We are going to then append the canvas into the component element specified by the element option.  Since we don't want any external scripts to be able to manipulate the canvas, let's add it as a private member.  We can also explicitly make the options public even though \`public\` is the Typescript default.
+We are going to then append the canvas into the component element specified by the element option.  Since we don't want any external scripts to be able to manipulate the canvas, let's add it as a private member.  We can also explicitly make the options public even though `public` is the Typescript default.
 
 ```
 public options: ISvgDrawComponentOptions;
 private _$canvas: JQuery;
 ```
 
-Then, in the \_init method we can replace the `this._$element.append("I am an example component");` line with the canvas element we want to add to the page:
+Then, in the `_init` method we can replace the `this._$element.append("I am an example component");` line with the canvas element we want to add to the page:
 
 ```
-this._$canvas = $('<canvas id="paper"></canvas>'); 
+this._$canvas = $('<canvas id="paper"></canvas>');
 this._$element.append(this._$canvas);
 ```
 
@@ -38,49 +38,49 @@ Because Paper.js is bundled into our component as a dependent, we should be able
 
 ```js
 
-paper.install(window); 
+paper.install(window);
 var tool1, tool2, tool3;
 
- window.onload = function() { 
-   // Get a reference to the canvas object 
-   var canvas = document.getElementById('canvas-1'); 
+ window.onload = function() {
+   // Get a reference to the canvas object
+   var canvas = document.getElementById('canvas-1');
 
-   // Create an empty project and a view for the canvas: 
-   paper.setup(canvas); 
+   // Create an empty project and a view for the canvas:
+   paper.setup(canvas);
 
-   // Both share the mouseDown event: 
-   var path; 
+   // Both share the mouseDown event:
+   var path;
    var rectangle = null;
 
-   function onMouseDown(event) { 
-    path = new Path(); 
-    path.strokeColor = 'red'; 
+   function onMouseDown(event) {
+    path = new Path();
+    path.strokeColor = 'red';
     path.add(event.point); }
 
    ////// S T R A I G H T L I N E S ////////
    tool1 = new Tool(); tool1.onMouseDown = onMouseDown;
 
-   tool1.onMouseDrag = function(event) { 
+   tool1.onMouseDrag = function(event) {
      path.add(event.point); }
 
-   ////// C L O U D Y L I N E S ///////// 
-   tool2 = new Tool(); 
-   tool2.minDistance = 20; 
+   ////// C L O U D Y L I N E S /////////
+   tool2 = new Tool();
+   tool2.minDistance = 20;
    tool2.onMouseDown = onMouseDown;
 
-   tool2.onMouseDrag = function(event) { 
-       // Use the arcTo command to draw cloudy lines 
+   tool2.onMouseDrag = function(event) {
+       // Use the arcTo command to draw cloudy lines
        path.arcTo(event.point); }
 
-   ////// R E C T A N G L E ///////// 
-   tool3 = new Tool(); 
-   tool3.onMouseDrag = function(event) { 
-       if (rectangle) { 
-           rectangle.remove(); } 
+   ////// R E C T A N G L E /////////
+   tool3 = new Tool();
+   tool3.onMouseDrag = function(event) {
+       if (rectangle) {
+           rectangle.remove(); }
        drawRect(event.downPoint, event.point); }
 
-   function drawRect(start, end) { 
-       rectangle = new Path.Rectangle(start, end); 
+   function drawRect(start, end) {
+       rectangle = new Path.Rectangle(start, end);
        rectangle.strokeColor = 'red'; } };
 
 ```
@@ -94,4 +94,3 @@ Add the following HTML to your index.html:
 ```
 
 This should give you something like what you see in [this demo](http://sdellis.com/svg-draw-component/examples/default.html).  Ultimately, we will want to move this code into the component itself, but we will not be able to use the Paper.js functionality until we do a little more setup in our component.  We will explore how to do this later when we talk about [Mixins](/mixins.md).
-
