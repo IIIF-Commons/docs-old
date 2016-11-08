@@ -1,6 +1,6 @@
-# Rendering to the DOM via _Element_
+# Mounting on the DOM via _Element_
 
-The base-component provides an "element" option that allows us to render our component to the DOM.
+The base-component provides an "element" option that allows us to mount our component on the DOM.
 
 We are going to then append the canvas into the component element specified by the element option.  Since we don't want any external scripts to be able to manipulate the canvas, let's add it as a private member.  We can also explicitly make the options public even though `public` is the Typescript default.
 

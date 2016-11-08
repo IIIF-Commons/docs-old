@@ -17,7 +17,7 @@
     * [Custom Styles and Images](tutorial/styles.md)
     * [Dependencies](tutorial/dependencies.md)
     * [Demo Dependencies](tutorial/demo-dependencies.md)
-    * [Binding to the DOM via Element](tutorial/binding-to-the-dom.md)
+    * [Mounting on the DOM via Element](tutorial/mounting-on-the-dom.md)
     * [Defining Options](tutorial/options.md)
     * [Events](tutorial/events.md)
     * [Mixins](tutorial/mixins.md)
